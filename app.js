@@ -1,18 +1,19 @@
 /* ===== CONFIG ===== */
-const CHECKOUT_URL = "https://exemplo.com/checkout"; // troque pelo seu link real
-const PRICE_LABEL = "R$39,90";
-
-// Fallbacks de imagem (substitua por fotos do Tim Maia fase Racional, se quiser)
-const TIM1_CANDIDATES = [
-  "https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=1400&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1400&auto=format&fit=crop",
-  "https://picsum.photos/id/237/1200/1500"
-];
-const TIM2_CANDIDATES = [
-  "https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?q=80&w=1200&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=1400&auto=format&fit=crop",
-  "https://picsum.photos/id/1011/1200/800"
-];
+const CONFIG = {
+  CHECKOUT_URL: "https://exemplo.com/checkout", // troque pelo seu link real
+  PRICE_LABEL: "R$39,90",
+  // Fallbacks de imagem (substitua por fotos do Tim Maia fase Racional, se quiser)
+  TIM1_CANDIDATES: [
+    "https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=1400&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1400&auto=format&fit=crop",
+    "https://picsum.photos/id/237/1200/1500"
+  ],
+  TIM2_CANDIDATES: [
+    "https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?q=80&w=1200&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=1400&auto=format&fit=crop",
+    "https://picsum.photos/id/1011/1200/800"
+  ],
+};
 
 /* ===== HELPERS ===== */
 const $ = (sel, root=document) => root.querySelector(sel);
@@ -56,21 +57,21 @@ function loadFirstAvailable(imgEl, candidates){
 (function heroImages(){
   const imgA = $('#imgA');
   const imgB = $('#imgB');
-  if (imgA) loadFirstAvailable(imgA, TIM1_CANDIDATES);
-  if (imgB) loadFirstAvailable(imgB, TIM2_CANDIDATES);
+  if (imgA) loadFirstAvailable(imgA, CONFIG.TIM1_CANDIDATES);
+  if (imgB) loadFirstAvailable(imgB, CONFIG.TIM2_CANDIDATES);
 })();
 
 /* ===== PREÇO & CHECKOUT ===== */
 (function pricing(){
   $$('#oferta [data-js="price-number"], [data-js="price-inline"], [data-js="price-cta"]').forEach(el=>{
     if (el.hasAttribute('data-js') && el.getAttribute('data-js') === 'price-cta') {
-      el.textContent = `Comprar agora — ${PRICE_LABEL}`;
+      el.textContent = `Comprar agora — ${CONFIG.PRICE_LABEL}`;
     } else {
-      el.textContent = PRICE_LABEL;
+      el.textContent = CONFIG.PRICE_LABEL;
     }
   });
   $$('#oferta [data-js="checkout-cta"], [data-js="checkout-cta"]').forEach(el=>{
-    el.setAttribute('href', CHECKOUT_URL);
+    el.setAttribute('href', CONFIG.CHECKOUT_URL);
   });
 })();
 
