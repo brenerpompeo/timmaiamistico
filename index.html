@@ -478,11 +478,14 @@
                 </svg>
             </div>
             <h3 class="text-2xl font-bold mt-4">Inscrição Concluída!</h3>
-            <p class="mt-2 text-slate-600 dark:text-slate-400">Seu bônus, o livro "Universo em Desencanto", está pronto para download.</p>
+            <p class="mt-2 text-slate-600 dark:text-slate-400">Seu bônus está pronto! Siga os passos abaixo:</p>
             <button id="download-bonus-btn" class="w-full mt-6 inline-flex items-center justify-center rounded-full font-semibold transition duration-200 ease-in-out transform hover:scale-105 active:scale-95 px-6 py-3.5 text-lg bg-emerald-600 text-white hover:bg-emerald-500">
-                Baixar Bônus e Ver Oferta do Guia
+                Passo 1: Baixar Bônus Grátis
             </button>
-            <button id="close-bonus-modal-btn" class="mt-2 text-sm text-slate-500 hover:underline">Fechar</button>
+            <button id="go-to-offer-btn" class="w-full mt-3 inline-flex items-center justify-center rounded-full font-semibold transition duration-200 ease-in-out transform hover:scale-105 active:scale-95 px-6 py-3.5 text-lg bg-amber-500 text-white hover:bg-amber-400">
+                Passo 2: Conhecer o Guia Completo
+            </button>
+            <button id="close-bonus-modal-btn" class="mt-4 text-sm text-slate-500 hover:underline">Fechar</button>
         </div>
     </div>
 
@@ -641,10 +644,11 @@
           const submitBtn = form.querySelector('button[type="submit"]');
           const modal = $('#bonus-success-modal');
           const downloadBtn = $('#download-bonus-btn');
+          const goToOfferBtn = $('#go-to-offer-btn');
           const closeModalBtn = $('#close-bonus-modal-btn');
 
           const bonusPdfUrl = 'https://drive.google.com/file/d/1wK8vMLUU7piFNa9vnDlpv2vm56mxVxTN/view?usp=sharing';
-          const webAppUrl = 'https://script.google.com/macros/s/AKfycbxeSUNYxPF8Iu6z2lp8TZJsTDT469lDIKpmbIUVTx1dx4P8j6CR1fb2Gtzsl-1vorQG/exec'; 
+          const webAppUrl = 'https://script.google.com/macros/s/AKfycbxeSUNYxPF8Iu6z2lp8TZJsTDT469lDIKpmbIUVTx1dx4P8j6CR1fb2Gtzsl-1vorQG/exec';
 
           const openSuccessModal = () => {
               if (!modal) return;
@@ -675,6 +679,12 @@
           downloadBtn.addEventListener('click', (e) => {
               e.preventDefault();
               window.open(bonusPdfUrl, '_blank');
+              downloadBtn.textContent = 'Bônus Baixado!';
+              downloadBtn.disabled = true;
+          });
+          
+          goToOfferBtn.addEventListener('click', (e) => {
+              e.preventDefault();
               window.open(CHECKOUT_URL, '_blank');
               closeSuccessModal();
           });
