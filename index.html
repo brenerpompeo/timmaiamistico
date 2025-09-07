@@ -342,7 +342,7 @@
                         </div>
                         <button type="submit" class="w-full mt-4 inline-flex items-center justify-center rounded-full font-semibold transition duration-200 ease-in-out transform hover:scale-105 active:scale-95 px-6 py-3.5 text-lg bg-emerald-600 text-white hover:bg-emerald-500">Receber Bônus Grátis</button>
                     </form>
-                    <p id="bonus-feedback" class="mt-4 text-sm text-slate-600 dark:text-slate-400" aria-live="polite"></p>
+                    <div id="bonus-feedback" class="mt-4 text-sm text-slate-600 dark:text-slate-400" aria-live="polite"></div>
                 </div>
             </div>
         </div>
@@ -468,6 +468,24 @@
           <main id="modal-content" class="p-6 overflow-y-auto"></main>
       </div>
   </div>
+  
+  <!-- Modal de Sucesso do Bônus -->
+    <div id="bonus-success-modal" class="fixed inset-0 bg-black/60 z-[60] hidden items-center justify-center p-4 transition-opacity duration-300 opacity-0">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-xl max-w-md w-full text-center p-8 transform transition-transform duration-300 scale-95">
+            <div class="w-16 h-16 mx-auto rounded-full bg-emerald-100 dark:bg-emerald-900 text-emerald-600 dark:text-emerald-400 grid place-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+            </div>
+            <h3 class="text-2xl font-bold mt-4">Inscrição Concluída!</h3>
+            <p class="mt-2 text-slate-600 dark:text-slate-400">Seu bônus, o livro "Universo em Desencanto", está pronto para download.</p>
+            <button id="download-bonus-btn" class="w-full mt-6 inline-flex items-center justify-center rounded-full font-semibold transition duration-200 ease-in-out transform hover:scale-105 active:scale-95 px-6 py-3.5 text-lg bg-emerald-600 text-white hover:bg-emerald-500">
+                Baixar Bônus e Ver Oferta do Guia
+            </button>
+            <button id="close-bonus-modal-btn" class="mt-2 text-sm text-slate-500 hover:underline">Fechar</button>
+        </div>
+    </div>
+
 
   <footer class="bg-[#FAF8F5] dark:bg-slate-950 border-t border-black/5 dark:border-white/5 pt-10">
       <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-2 gap-8">
@@ -619,16 +637,90 @@
 
       (function bonusFormHandler() {
           const form = $('#bonus-form'); if (!form) return;
-          const feedbackEl = $('#bonus-feedback'), submitBtn = form.querySelector('button[type="submit"]');
+          const feedbackEl = $('#bonus-feedback');
+          const submitBtn = form.querySelector('button[type="submit"]');
+          const modal = $('#bonus-success-modal');
+          const downloadBtn = $('#download-bonus-btn');
+          const closeModalBtn = $('#close-bonus-modal-btn');
+
+          const bonusPdfUrl = 'https://drive.google.com/file/d/1wK8vMLUU7piFNa9vnDlpv2vm56mxVxTN/view?usp=sharing';
+          const webAppUrl = 'https://script.google.com/macros/s/AKfycbxeSUNYxPF8Iu6z2lp8TZJsTDT469lDIKpmbIUVTx1dx4P8j6CR1fb2Gtzsl-1vorQG/exec'; 
+
+          const openSuccessModal = () => {
+              if (!modal) return;
+              const modalContainer = modal.querySelector('div');
+              modal.classList.remove('hidden'); modal.classList.add('flex');
+              document.body.classList.add('modal-open');
+              setTimeout(() => {
+                  modal.classList.remove('opacity-0');
+                  modalContainer.classList.remove('scale-95');
+              }, 10);
+          };
+
+          const closeSuccessModal = () => {
+              if (!modal) return;
+              const modalContainer = modal.querySelector('div');
+              modal.classList.add('opacity-0'); modalContainer.classList.add('scale-95');
+              setTimeout(() => {
+                  modal.classList.add('hidden'); modal.classList.remove('flex');
+                  if (!$('#policy-modal').classList.contains('flex')) {
+                      document.body.classList.remove('modal-open');
+                  }
+              }, 300);
+          };
+
+          closeModalBtn.addEventListener('click', closeSuccessModal);
+          modal.addEventListener('click', (e) => { if (e.target === modal) closeSuccessModal(); });
+
+          downloadBtn.addEventListener('click', (e) => {
+              e.preventDefault();
+              window.open(bonusPdfUrl, '_blank');
+              window.open(CHECKOUT_URL, '_blank');
+              closeSuccessModal();
+          });
+
           form.addEventListener('submit', (e) => {
               e.preventDefault();
-              const name = $('#bonus-name').value, email = $('#bonus-email').value;
-              if (!name || !email) { feedbackEl.textContent = 'Por favor, preencha todos os campos.'; feedbackEl.classList.add('text-red-500'); return; }
-              if (!/^\S+@\S+\.\S+$/.test(email)) { feedbackEl.textContent = 'Por favor, insira um e-mail válido.'; feedbackEl.classList.add('text-red-500'); return; }
-              feedbackEl.textContent = `Obrigado, ${name}! Seu bônus será enviado para ${email} em breve.`;
-              feedbackEl.classList.remove('text-red-500'); feedbackEl.classList.add('text-emerald-600', 'dark:text-emerald-400');
-              submitBtn.disabled = true; submitBtn.textContent = 'Enviado!';
-              submitBtn.classList.add('bg-gray-500', 'hover:bg-gray-500'); form.reset();
+              const name = $('#bonus-name').value;
+              const email = $('#bonus-email').value;
+
+              if (!name || !email) {
+                  feedbackEl.textContent = 'Por favor, preencha todos os campos.';
+                  feedbackEl.classList.add('text-red-500'); return;
+              }
+              if (!/^\S+@\S+\.\S+$/.test(email)) {
+                  feedbackEl.textContent = 'Por favor, insira um e-mail válido.';
+                  feedbackEl.classList.add('text-red-500'); return;
+              }
+              
+              submitBtn.disabled = true;
+              submitBtn.textContent = 'Enviando...';
+              feedbackEl.textContent = '';
+              feedbackEl.classList.remove('text-red-500');
+
+              const formData = new FormData();
+              formData.append('name', name);
+              formData.append('email', email);
+
+              fetch(webAppUrl, { method: 'POST', body: formData })
+              .then(res => res.json())
+              .then(data => {
+                  if (data.result === "success") {
+                      openSuccessModal();
+                      form.reset();
+                  } else {
+                      throw new Error(data.error || 'Unknown error from script');
+                  }
+              })
+              .catch(error => {
+                  console.error('Error:', error);
+                  feedbackEl.textContent = 'Ocorreu um erro. Tente novamente mais tarde.';
+                  feedbackEl.classList.add('text-red-500');
+              })
+              .finally(() => {
+                  submitBtn.disabled = false;
+                  submitBtn.textContent = 'Receber Bônus Grátis';
+              });
           });
       })();
 
