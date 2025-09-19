@@ -11,6 +11,16 @@
   <meta name="author" content="Tim Maia Místico" />
   <link rel="canonical" href="https://www.timmaiamistico.com" />
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J9NRLHMSFM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-J9NRLHMSFM');
+  </script>
+
   <!-- Meta Tags para Redes Sociais (Open Graph) -->
   <meta property="og:title" content="Tim Maia Racional: O Livro e Audiobook que Desvendam a Fase Mística" />
   <meta property="og:description" content="Análise completa da história por trás da Cultura Racional e da fase mais enigmática de Tim Maia. Disponível em eBook e Audiobook." />
@@ -156,7 +166,7 @@
   <header id="site-header" class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur border-b border-black/5 dark:border-white/5 transition-all">
     <div class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
       <a href="#inicio" class="flex items-center" aria-label="Início">
-        <span class="text-xl font-black tracking-tight leading-none">
+        <span class="text-xl font-black tracking-tight leading-none text-center">
           <span class="text-emerald-500">Tim Maia</span>
           <span class="block text-slate-900 dark:text-white">Racional</span>
         </span>
@@ -770,6 +780,10 @@
 
           downloadBtn.addEventListener('click', (e) => {
               e.preventDefault();
+              gtag('event', 'bonus_download', {
+                'event_category': 'lead_magnet',
+                'event_label': 'Universo em Desencanto'
+              });
               window.open(bonusPdfUrl, '_blank');
               downloadBtn.textContent = 'Bônus Baixado!';
               downloadBtn.disabled = true;
@@ -808,6 +822,10 @@
               .then(res => res.json())
               .then(data => {
                   if (data.result === "success") {
+                      gtag('event', 'generate_lead', {
+                        'event_category': 'form_submission',
+                        'event_label': 'Bonus Signup'
+                      });
                       openSuccessModal();
                       form.reset();
                   } else {
