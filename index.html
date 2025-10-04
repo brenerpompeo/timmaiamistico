@@ -741,10 +741,30 @@
       function initScrollReveal(selector = '.reveal') { document.querySelectorAll(selector).forEach(el => { scrollRevealObserver.observe(el); }); }
 
       const articles = [
-        { url: 'https://medium.com/@brenerpompeo/desvendando-a-mente-por-tr%C3%A1s-da-m%C3%BAsica-a-rela%C3%A7%C3%A3o-entre-a-fase-racional-de-tim-maia-e-a-c1f964a27a85', imageUrl: 'https://images.unsplash.com/photo-1587223383391-2a161f54b8d0?q=80&w=870&auto=format&fit=crop', title: 'As Influências do Soul na Fase Racional', subtitle: 'Uma análise musical que vai além do óbvio, explorando os arranjos de metais e as linhas de baixo que definiram o som de Tim Maia nos anos 70.' },
-        { url: 'https://medium.com/@brenerpompeo/desvendando-a-mente-por-tr%C3%A1s-da-m%C3%BAsica-a-rela%C3%A7%C3%A3o-entre-a-fase-racional-de-tim-maia-e-a-c1f964a27a85', imageUrl: 'https://images.unsplash.com/photo-1518600576225-c1d028a4e627?q=80&w=870&auto=format&fit=crop', title: '"Universo em Desencanto": Um Guia para Iniciantes', subtitle: 'Desmistificamos os principais conceitos da Cultura Racional de forma simples, para que você possa entender as letras de Tim Maia sem precisar ler os mil volumes.' },
-        { url: 'https://medium.com/@brenerpompeo/desvendando-a-mente-por-tr%C3%A1s-da-m%C3%BAsica-a-rela%C3%A7%C3%A3o-entre-a-fase-racional-de-tim-maia-e-a-c1f964a27a85', imageUrl: 'https://images.unsplash.com/photo-1504321925958-b0a4f5b51a23?q=80&w=774&auto=format&fit=crop', title: 'O Legado Pós-Racional: Como a Fase Mística Influenciou o Resto da Carreira', subtitle: 'Analisamos como a experiência com a Cultura Racional, mesmo após o rompimento, ecoou nas composições e no comportamento de Tim Maia até o fim de sua vida.' },
-        { url: 'https://medium.com/@brenerpompeo/desvendando-a-mente-por-tr%C3%A1s-da-m%C3%BAsica-a-rela%C3%A7%C3%A3o-entre-a-fase-racional-de-tim-maia-e-a-c1f964a27a85', imageUrl: 'https://images.unsplash.com/photo-1516979187457-637abb4f9353?q=80&w=870&auto=format&fit=crop', title: 'A Relação de Tim Maia com Outros Artistas', subtitle: 'Explore as parcerias, amizades e rivalidades que marcaram a carreira do Síndico durante e após sua fase mais mística e controversa.' }
+       { 
+          url: 'https://medium.com/@timmaiamistico/a-geometria-sagrada-do-groove-f76d9c037c21', 
+          imageUrl: 'https://miro.medium.com/v2/resize:fit:2000/format:webp/1*i4w7FDatCvAl0aW8dbXABg.jpeg', 
+          title: 'Como o Soul de Tim Maia Atingiu o Apogeu no Universo em Desencanto', 
+          subtitle: 'Como o funk e o soul se tornaram o veículo perfeito para a pregação cósmica de Tim Maia, através de grooves pulsantes e metais assertivos.' 
+        },
+        { 
+          url: 'https://medium.com/@brenerpompeo/desvendando-a-mente-por-tr%C3%A1s-da-m%C3%BAsica-a-rela%C3%A7%C3%A3o-entre-a-fase-racional-de-tim-maia-e-a-c1f964a27a85', 
+          imageUrl: 'https://images.unsplash.com/photo-1518600576225-c1d028a4e627?q=80&w=870&auto=format&fit=crop', 
+          title: '"Universo em Desencanto": Um Guia para Iniciantes', 
+          subtitle: 'Desmistificamos os principais conceitos da Cultura Racional de forma simples, para que você possa entender as letras de Tim Maia sem precisar ler os mil volumes.' 
+        },
+        { 
+          url: 'https://medium.com/@brenerpompeo/desvendando-a-mente-por-tr%C3%A1s-da-m%C3%BAsica-a-rela%C3%A7%C3%A3o-entre-a-fase-racional-de-tim-maia-e-a-c1f964a27a85', 
+          imageUrl: 'https://images.unsplash.com/photo-1504321925958-b0a4f5b51a23?q=80&w=774&auto=format&fit=crop', 
+          title: 'O Legado Pós-Racional: Como a Fase Mística Influenciou o Resto da Carreira', 
+          subtitle: 'Analisamos como a experiência com a Cultura Racional, mesmo após o rompimento, ecoou nas composições e no comportamento de Tim Maia até o fim de sua vida.' 
+        },
+        { 
+          url: 'https://medium.com/@brenerpompeo/desvendando-a-mente-por-tr%C3%A1s-da-m%C3%BAsica-a-rela%C3%A7%C3%A3o-entre-a-fase-racional-de-tim-maia-e-a-c1f964a27a85', 
+          imageUrl: 'https://images.unsplash.com/photo-1516979187457-637abb4f9353?q=80&w=870&auto=format&fit=crop', 
+          title: 'A Relação de Tim Maia com Outros Artistas', 
+          subtitle: 'Explore as parcerias, amizades e rivalidades que marcaram a carreira do Síndico durante e após sua fase mais mística e controversa.' 
+        }
       ];
       (function renderBlogArticles() {
         const container = $('#blog-articles-container'); if (!container) return; let articlesHTML = '';
