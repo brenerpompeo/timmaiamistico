@@ -466,7 +466,7 @@
                   <div class="h-8 w-14 bg-white rounded-md flex items-center justify-center p-1"><img loading="lazy" src="https://logospng.org/download/pix/logo-pix-1024.png" alt="Logo Pix" class="h-5 rounded-sm object-contain" /></div>
                   <div class="h-8 w-14 bg-white rounded-md flex items-center justify-center p-1"><img loading="lazy" src="https://logodownload.org/wp-content/uploads/2019/09/boleto-logo.png" alt="Logo Boleto" class="h-5 object-contain" /></div>
                 </div>
-                <div class="rounded-xl border border-emerald-400/40 bg-emerald-400/10 p-4 text-emerald-100"><div class="flex items-start gap-3"><svg width="20" height="20" viewBox="0 0 24 24" class="stroke-current flex-shrink-0 mt-0.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-width="1.5" fill="none"/></svg><div><p class="font-bold">Garantia de Satisfação</p><p class="text-emerald-100/90 text-sm">7 dias para testar o livro. Reembolso total se não gostar.</p></div></div></div>
+                <div class="rounded-xl border border-emerald-400/40 bg-emerald-400/10 p-4 text-emerald-100"><div class="flex items-center gap-3"><svg width="20" height="20" viewBox="0 0 24 24" class="stroke-current flex-shrink-0"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-width="1.5" fill="none"/></svg><div><p class="font-bold">Garantia de Satisfação</p><p class="text-emerald-100/90 text-sm">7 dias para testar o livro. Reembolso total se não gostar.</p></div></div></div>
               </div>
             </div>
             <div class="mt-6 border-t border-white/10 pt-6">
@@ -481,16 +481,24 @@
 
     <!-- Seção: Blog -->
     <section id="blog" class="py-16 md:py-20 bg-slate-50 dark:bg-slate-950">
-      <div class="max-w-7xl mx-auto px-5">
-        <div class="text-center max-w-3xl mx-auto reveal">
-          <p class="uppercase tracking-[.14em] text-xs text-black/60 dark:text-white/60 font-semibold">Nosso Blog</p>
-          <h2 class="text-3xl sm:text-5xl font-black dark:text-white">Artigos & Análises sobre a Cultura Racional</h2>
-          <p class="mt-3 text-black/70 dark:text-slate-400 max-w-prose mx-auto">Aprofunde-se em temas relacionados com nossos artigos exclusivos sobre a música e a filosofia por trás de Tim Maia.</p>
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12 reveal">
+                <div class="text-left">
+                    <div class="flex items-center gap-4 mb-2">
+                        <img src="https://miro.medium.com/1*RB1rxSK_TBmcC5D2PN30JA.png" alt="Logo do Medium" class="h-16 w-16 rounded-full border-4 border-white dark:border-slate-700 shadow-md">
+                        <p class="uppercase tracking-[.14em] text-xs text-black/60 dark:text-white/60 font-semibold">Parceiro Oficial</p>
+                    </div>
+                    <h2 class="text-3xl sm:text-5xl font-black dark:text-white">Análises Exclusivas no Medium</h2>
+                    <p class="mt-3 text-black/70 dark:text-slate-400 max-w-prose">Aprofunde-se em temas relacionados com nossos artigos exclusivos sobre a música e a filosofia por trás de Tim Maia.</p>
+                </div>
+                <a href="https://medium.com/@timmaiamistico" target="_blank" rel="noopener noreferrer" class="mt-6 sm:mt-0 flex-shrink-0 bg-white text-black font-bold rounded-full px-8 py-4 shadow-lg hover:bg-slate-200 dark:bg-slate-200 dark:text-black dark:hover:bg-slate-300 transition-all duration-300 transform hover:scale-105">
+                    Conteúdo exclusivo
+                </a>
+            </div>
+            <div id="blog-articles-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Cards dos artigos inseridos via JS -->
+            </div>
         </div>
-        <div id="blog-articles-container" class="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <!-- Cards dos artigos inseridos via JS -->
-        </div>
-      </div>
     </section>
 
     <!-- FAQ -->
@@ -550,7 +558,7 @@
                   <div class="h-8 w-14 bg-white rounded-md flex items-center justify-center p-1"><img loading="lazy" src="https://logospng.org/download/pix/logo-pix-1024.png" alt="Logo Pix" class="h-5 rounded-sm object-contain" /></div>
                   <div class="h-8 w-14 bg-white rounded-md flex items-center justify-center p-1"><img loading="lazy" src="https://logodownload.org/wp-content/uploads/2019/09/boleto-logo.png" alt="Logo Boleto" class="h-5 object-contain" /></div>
                 </div>
-                 <div class="rounded-xl border border-emerald-400/40 bg-emerald-400/10 p-3 text-emerald-100 flex items-start gap-3 text-sm"><svg width="20" height="20" viewBox="0 0 24 24" class="stroke-current flex-shrink-0 mt-0.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-width="1.5" fill="none"/></svg><div><p class="font-bold">Garantia Inclusa</p><p class="text-emerald-100/90 text-xs">A mesma garantia de 7 dias se aplica.</p></div></div>
+                 <div class="rounded-xl border border-emerald-400/40 bg-emerald-400/10 p-3 text-emerald-100 flex items-center gap-3 text-sm"><svg width="20" height="20" viewBox="0 0 24 24" class="stroke-current flex-shrink-0"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-width="1.5" fill="none"/></svg><div><p class="font-bold">Garantia Inclusa</p><p class="text-emerald-100/90 text-xs">A mesma garantia de 7 dias se aplica.</p></div></div>
               </div>
             </div>
         </div>
@@ -741,37 +749,31 @@
       function initScrollReveal(selector = '.reveal') { document.querySelectorAll(selector).forEach(el => { scrollRevealObserver.observe(el); }); }
 
       const articles = [
-       { 
-          url: 'https://medium.com/@timmaiamistico/a-geometria-sagrada-do-groove-f76d9c037c21', 
-          imageUrl: 'https://miro.medium.com/v2/resize:fit:2000/format:webp/1*i4w7FDatCvAl0aW8dbXABg.jpeg', 
-          title: 'Como o soul de Tim Maia atingiu o apogeu no Universo em Desencanto', 
-          subtitle: 'Como o funk e o soul se tornaram o veículo perfeito para a pregação cósmica de Tim Maia, através de grooves pulsantes e metais assertivos.' 
-        },
-        { 
-          url: 'https://medium.com/@timmaiamistico/universo-em-desencanto-um-guia-para-iniciantes-5ee8547908ce', 
-          imageUrl: 'https://miro.medium.com/v2/resize:fit:1100/format:webp/1*qAF9GlVOJShNjEyP3Me2TQ.jpeg', 
-          title: '"Universo em Desencanto": Um Guia para Iniciantes', 
-          subtitle: 'Desmistificamos os principais conceitos da Cultura Racional de forma simples, para que você possa entender as letras de Tim Maia sem precisar ler os mil volumes.' 
-        },
-        { 
-          url: 'https://medium.com/@timmaiamistico/como-a-fase-racional-forjou-o-resto-da-vida-de-tim-maia-72d9ec1de620', 
-          imageUrl: 'https://miro.medium.com/v2/resize:fit:1100/format:webp/1*gqO8cogz8fspt-q1N83AgQ.jpeg', 
-          title: 'Como a fase racional forjou o resto da vida de Tim Maia', 
-          subtitle: 'O legado do desencanto Racional não está apenas nos discos de 1975, mas está impresso em cada decisão de carreira e em cada ato de rebeldia que se seguiu.' 
-        },
-        { 
-          url: 'https://medium.com/@brenerpompeo/desvendando-a-mente-por-tr%C3%A1s-da-m%C3%BAsica-a-rela%C3%A7%C3%A3o-entre-a-fase-racional-de-tim-maia-e-a-c1f964a27a85', 
-          imageUrl: 'https://images.unsplash.com/photo-1516979187457-637abb4f9353?q=80&w=870&auto=format&fit=crop', 
-          title: 'A Relação de Tim Maia com Outros Artistas', 
-          subtitle: 'Explore as parcerias, amizades e rivalidades que marcaram a carreira do Síndico durante e após sua fase mais mística e controversa.' 
-        }
+          {
+              url: 'https://medium.com/@timmaiamistico/tim-maia-biografia-7-fatos-inéditos-a-rivalidade-com-roberto-carlos-e-a-fase-racional-a48a0715392e',
+              imageUrl: 'https://miro.medium.com/v2/resize:fit:1100/format:webp/1*tnAFSY7B23ryuLYj7PIX5Q.jpeg',
+              title: 'Tim Maia: Biografia Completa, 7 Fatos Inéditos, a Rivalidade com Roberto Carlos e a Fase Racional',
+              subtitle: 'Ele se tornou um ícone precisamente porque era inegociável. Essa inegociabilidade — que lhe causou turbulência em vida — é hoje seu maior valor cultural.'
+          },
+          {
+              url: 'https://medium.com/@timmaiamistico/a-geometria-sagrada-do-groove-f76d9c037c21',
+              imageUrl: 'https://miro.medium.com/v2/resize:fit:1100/format:webp/1*i4w7FDatCvAl0aW8dbXABg.jpeg',
+              title: 'Tim Maia na fase racional: História, polêmicas e por que é sua obra-prima musical',
+              subtitle: 'Ele conseguiu criar uma obra-prima musical não por causa da doutrina esotérica, mas, de maneira paradoxal, através da disciplina que ela lhe impôs.'
+          },
+          {
+              url: 'https://medium.com/@timmaiamistico/o-legado-visceral-da-fase-racional-de-tim-maia-música-independência-e-o-nascimento-do-síndico-2680459a96e5',
+              imageUrl: 'https://miro.medium.com/v2/resize:fit:1100/format:webp/1*qAF9GlVOJShNjEyP3Me2TQ.jpeg',
+              title: 'O legado visceral da fase racional de Tim Maia: Música, independência e o nascimento do Síndico',
+              subtitle: 'A Fase Racional forjou os pilares do legado de Tim Maia, definindo sua sonoridade definitiva, sua independência profissional e o núcleo de seu mito como gênio indomável.'
+          }
       ];
       (function renderBlogArticles() {
         const container = $('#blog-articles-container'); if (!container) return; let articlesHTML = '';
         articles.forEach(article => {
           const encodedTitle = encodeURIComponent(article.title);
           const placeholderUrl = `https://placehold.co/870x480/059669/FFFFFF?text=${encodedTitle}`;
-          articlesHTML += `<a href="${article.url}" target="_blank" rel="noopener noreferrer" class="group block"><div class="reveal rounded-2xl border dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-sm transition duration-300 hover:shadow-lg hover:-translate-y-1 h-full flex flex-col"><img loading="lazy" src="${article.imageUrl}" alt="Imagem de capa para o artigo: ${article.title}" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.onerror=null;this.src='${placeholderUrl}';"><div class="p-6 flex flex-col flex-grow"><h3 class="font-extrabold text-xl dark:text-white">${article.title}</h3><p class="mt-2 text-black/70 dark:text-slate-400 text-sm flex-grow">${article.subtitle}</p><div class="mt-4 font-semibold text-emerald-600 dark:text-emerald-400 inline-flex items-center gap-2 self-start">Leia no Medium <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></div></div></div></a>`;
+          articlesHTML += `<a href="${article.url}" target="_blank" rel="noopener noreferrer" class="group block reveal"><div class="rounded-2xl border dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-sm transition duration-300 hover:shadow-lg hover:-translate-y-1 h-full flex flex-col"><img loading="lazy" src="${article.imageUrl}" alt="Imagem de capa para o artigo: ${article.title}" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.onerror=null;this.src='${placeholderUrl}';"><div class="p-6 flex flex-col flex-grow"><h3 class="font-extrabold text-xl dark:text-white">${article.title}</h3><p class="mt-2 text-black/70 dark:text-slate-400 text-sm flex-grow">${article.subtitle}</p><div class="mt-4 font-semibold text-emerald-600 dark:text-emerald-400 inline-flex items-center gap-2 self-start">Ler análise completa <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></div></div></div></a>`;
         });
         container.innerHTML = articlesHTML; initScrollReveal('#blog-articles-container .reveal');
       })();
