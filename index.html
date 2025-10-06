@@ -166,6 +166,13 @@
     }
     body.modal-open { overflow: hidden; }
     figure:hover { border-color: rgba(16, 185, 129, .25); transition: border-color 0.3s ease; }
+    .preview-container {
+      background-color: #f0f0f0;
+      border: 10px solid #333;
+      border-radius: 8px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      padding: 10px;
+    }
   </style>
 
   <!-- Script Anti-Flash (Dark Mode) -->
@@ -217,8 +224,10 @@
           <a href="#valor" class="drawer__link block px-3 py-3 rounded-2xl hover:bg-black/5 dark:hover:bg-white/10 font-medium">A Solução</a>
           <a href="#para-quem" class="drawer__link block px-3 py-3 rounded-2xl hover:bg-black/5 dark:hover:bg-white/10 font-medium">Para Quem É?</a>
           <a href="#conteudos" class="drawer__link block px-3 py-3 rounded-2xl hover:bg-black/5 dark:hover:bg-white/10 font-medium">Conteúdo do Livro</a>
+           <a href="#preview" class="drawer__link block px-3 py-3 rounded-2xl hover:bg-black/5 dark:hover:bg-white/10 font-medium">Amostra Grátis</a>
           <a href="#bonus" class="drawer__link block px-3 py-3 rounded-2xl hover:bg-black/5 dark:hover:bg-white/10 font-medium">Bônus</a>
           <a href="#quiz-section" class="drawer__link block px-3 py-3 rounded-2xl hover:bg-black/5 dark:hover:bg-white/10 font-medium">Show do Cupom</a>
+          <a href="#autor" class="drawer__link block px-3 py-3 rounded-2xl hover:bg-black/5 dark:hover:bg-white/10 font-medium">Sobre o Autor</a>
           <a href="#prova" class="drawer__link block px-3 py-3 rounded-2xl hover:bg-black/5 dark:hover:bg-white/10 font-medium">Depoimentos</a>
           <a href="#blog" class="drawer__link block px-3 py-3 rounded-2xl hover:bg-black/5 dark:hover:bg-white/10 font-medium">Blog</a>
           <a href="#oferta" class="drawer__link block px-3 py-3 rounded-2xl hover:bg-black/5 dark:hover:bg-white/10 font-medium">Oferta</a>
@@ -355,8 +364,30 @@
       </div>
     </section>
 
+    <!-- Seção de Amostra Grátis -->
+    <section id="preview" class="py-16 md:py-20">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="text-center max-w-3xl mx-auto reveal">
+          <p class="uppercase tracking-[.14em] text-xs text-black/60 dark:text-white/60 font-semibold">prove a qualidade</p>
+          <h2 class="text-3xl sm:text-5xl font-black dark:text-white">Dê uma Espiada Grátis no Guia</h2>
+          <p class="mt-3 text-black/70 dark:text-slate-400 max-w-prose mx-auto">Veja com seus próprios olhos a qualidade do nosso material. Disponibilizamos 3 páginas do ebook para você ter um gostinho do que espera por você.</p>
+        </div>
+        <div class="mt-12 max-w-4xl mx-auto reveal">
+          <div class="preview-container dark:bg-slate-800">
+            <iframe class="w-full h-[500px] sm:h-[600px] rounded-md" src="https://docs.google.com/gview?url=https://github.com/brenerpompeo/timmaiamistico/raw/main/public/amostra-tim-maia-mistico.pdf&embedded=true" frameborder="0"></iframe>
+          </div>
+          <div class="text-center mt-8">
+            <a href="https://github.com/brenerpompeo/timmaiamistico/raw/main/public/amostra-tim-maia-mistico.pdf" target="_blank" class="inline-flex items-center justify-center rounded-full font-semibold transition duration-200 ease-in-out transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-emerald-600 text-white hover:bg-emerald-500">
+              Baixar Amostra em PDF
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
     <!-- Seção de Bônus -->
-    <section id="bonus" class="py-16 md:py-20">
+    <section id="bonus" class="py-16 md:py-20 bg-[#F6F7F6] dark:bg-slate-800">
         <div class="max-w-7xl mx-auto px-5">
             <div class="max-w-2xl mx-auto text-center">
                 <div class="reveal">
@@ -378,7 +409,7 @@
     </section>
 
     <!-- Seção: Show do Cupom -->
-    <section id="quiz-section" class="py-16 md:py-20 bg-[#F6F7F6] dark:bg-slate-800">
+    <section id="quiz-section" class="py-16 md:py-20">
       <div class="max-w-7xl mx-auto px-5">
         <div class="reveal bg-slate-900 dark:bg-slate-950 rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden">
           <div class="absolute -top-10 -right-10 w-32 h-32 bg-emerald-500/10 rounded-full"></div>
@@ -400,6 +431,24 @@
         </div>
       </div>
     </section>
+    
+     <!-- Seção Sobre o Autor -->
+    <section id="autor" class="py-16 md:py-20 bg-slate-50 dark:bg-slate-950">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-8 items-center reveal">
+                <div class="md:col-span-1">
+                    <img src="https://placehold.co/400x400/E2E8F0/475569?text=Autor" alt="Foto do autor do guia, um especialista em cultura brasileira e na obra de Tim Maia." class="rounded-full w-48 h-48 mx-auto object-cover shadow-lg border-4 border-white dark:border-slate-700">
+                </div>
+                <div class="md:col-span-2 text-center md:text-left">
+                     <p class="uppercase tracking-[.14em] text-xs text-black/60 dark:text-white/60 font-semibold">sobre o autor</p>
+                    <h2 class="text-3xl sm:text-4xl font-black dark:text-white mt-2">Quem Desvendou o Mistério?</h2>
+                    <p class="mt-4 text-black/70 dark:text-slate-300">Este guia é fruto de anos de pesquisa por Bréner Pompêo, um jornalista e pesquisador musical apaixonado pela cultura brasileira. Cansado de informações fragmentadas e mitos sobre a fase Racional de Tim Maia, ele mergulhou em livros, artigos e nos próprios discos para criar a análise mais completa e imparcial sobre o tema.</p>
+                    <p class="mt-3 text-black/70 dark:text-slate-300">O objetivo é simples: oferecer a você um atalho, um guia definitivo que economiza seu tempo e entrega apenas o conhecimento essencial, com a credibilidade que o assunto merece.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Seção de Prova Social -->
     <section id="prova" class="py-16 md:py-20">
@@ -407,11 +456,11 @@
         <div class="text-center max-w-2xl mx-auto reveal">
           <p class="uppercase tracking-[.14em] text-xs text-black/60 dark:text-white/60 font-semibold">prova social</p>
           <h2 class="text-3xl sm:text-5xl font-black dark:text-white">O que os leitores do livro dizem</h2>
-          <p class="mt-2 text-black/70 dark:text-slate-400">Mais de 500 pessoas já desvendaram o mistério da fase Racional. Veja por que recomendam este eBook.</p>
+          <p class="mt-2 text-black/70 dark:text-slate-400">Mais de <span class="font-bold text-emerald-500">789</span> pessoas já desvendaram o mistério da fase Racional. Veja por que recomendam este eBook.</p>
         </div>
         <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center reveal">
           <div><b class="block text-5xl font-black dark:text-white">4,9/5</b><span class="text-black/70 dark:text-slate-400">Avaliação média</span></div>
-          <div><b class="block text-5xl font-black dark:text-white">500+</b><span class="text-black/70 dark:text-slate-400">Leitores satisfeitos</span></div>
+          <div><b class="block text-5xl font-black dark:text-white">789+</b><span class="text-black/70 dark:text-slate-400">Leitores Satisfeitos</span></div>
           <div><b class="block text-5xl font-black dark:text-white">98%</b><span class="text-black/70 dark:text-slate-400">Recomendariam</span></div>
           <div><b class="block text-5xl font-black dark:text-white">Zero</b><span class="text-black/70 dark:text-slate-400">Reembolsos</span></div>
         </div>
@@ -466,7 +515,7 @@
                   <div class="h-8 w-14 bg-white rounded-md flex items-center justify-center p-1"><img loading="lazy" src="https://logospng.org/download/pix/logo-pix-1024.png" alt="Logo Pix" class="h-5 rounded-sm object-contain" /></div>
                   <div class="h-8 w-14 bg-white rounded-md flex items-center justify-center p-1"><img loading="lazy" src="https://logodownload.org/wp-content/uploads/2019/09/boleto-logo.png" alt="Logo Boleto" class="h-5 object-contain" /></div>
                 </div>
-                <div class="rounded-xl border border-emerald-400/40 bg-emerald-400/10 p-4 text-emerald-100"><div class="flex items-center gap-3"><svg width="20" height="20" viewBox="0 0 24 24" class="stroke-current flex-shrink-0"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-width="1.5" fill="none"/></svg><div><p class="font-bold">Garantia de Satisfação</p><p class="text-emerald-100/90 text-sm">7 dias para testar o livro. Reembolso total se não gostar.</p></div></div></div>
+                <div class="rounded-xl border border-emerald-400/40 bg-emerald-400/10 p-4 text-emerald-100"><div class="flex items-center gap-3"><svg width="20" height="20" viewBox="0 0 24 24" class="stroke-current flex-shrink-0 mt-0.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-width="1.5" fill="none"/></svg><div><p class="font-bold">Garantia de Satisfação</p><p class="text-emerald-100/90 text-sm">7 dias para testar o livro. Reembolso total se não gostar.</p></div></div></div>
               </div>
             </div>
             <div class="mt-6 border-t border-white/10 pt-6">
@@ -651,14 +700,19 @@
             </div>
           </div>
         </div>
-        <div class="mt-12 border-t border-black/5 dark:border-white/5 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-black/60 dark:text-slate-400">
-            <p>© <span id="year"></span> Tim Maia Místico. Todos os direitos reservados.</p>
-            <p class="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-emerald-500" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2a3 3 0 00-6 0v2h6V7z" clip-rule="evenodd" />
-                </svg>
-                <span>Site protegido por SSL • Pagamento seguro</span>
+        <div class="mt-12 border-t border-black/5 dark:border-white/5 pt-8 text-center sm:text-left">
+            <p class="text-xs text-black/50 dark:text-slate-500">
+                <strong>Aviso Legal:</strong> Este é um guia analítico e cultural independente, criado por fãs e pesquisadores. Não possui afiliação, endosso ou autorização oficial do espólio de Tim Maia ou dos detentores dos direitos da Cultura Racional. O objetivo é puramente educacional e informativo.
             </p>
+            <div class="mt-4 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-black/60 dark:text-slate-400">
+                <p>© <span id="year"></span> Tim Maia Místico. Todos os direitos reservados.</p>
+                <p class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-emerald-500" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2a3 3 0 00-6 0v2h6V7z" clip-rule="evenodd" />
+                    </svg>
+                    <span>Site protegido por SSL • Pagamento seguro</span>
+                </p>
+            </div>
         </div>
       </div>
   </footer>
