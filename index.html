@@ -62,7 +62,7 @@
     "@type": "Book",
     "name": "Tim Maia Racional: O Livro que Desvenda a Cultura e a Fase Mística",
     "author": {
-      "@type": "Person",
+      "@type": "Organization",
       "name": "Tim Maia Místico" 
     },
     "description": "Um guia que decifra a filosofia da Cultura Racional, a história de Tim Maia e os segredos do livro Universo em Desencanto.",
@@ -166,12 +166,9 @@
     }
     body.modal-open { overflow: hidden; }
     figure:hover { border-color: rgba(16, 185, 129, .25); transition: border-color 0.3s ease; }
-    .preview-container {
-      background-color: #f0f0f0;
-      border: 10px solid #333;
-      border-radius: 8px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-      padding: 10px;
+    /* CORREÇÃO: Garante que o logo do Medium não estique */
+    #blog img.h-16 {
+      object-fit: contain;
     }
   </style>
 
@@ -224,10 +221,9 @@
           <a href="#valor" class="drawer__link block px-3 py-3 rounded-2xl hover:bg-black/5 dark:hover:bg-white/10 font-medium">A Solução</a>
           <a href="#para-quem" class="drawer__link block px-3 py-3 rounded-2xl hover:bg-black/5 dark:hover:bg-white/10 font-medium">Para Quem É?</a>
           <a href="#conteudos" class="drawer__link block px-3 py-3 rounded-2xl hover:bg-black/5 dark:hover:bg-white/10 font-medium">Conteúdo do Livro</a>
-           <a href="#preview" class="drawer__link block px-3 py-3 rounded-2xl hover:bg-black/5 dark:hover:bg-white/10 font-medium">Amostra Grátis</a>
           <a href="#bonus" class="drawer__link block px-3 py-3 rounded-2xl hover:bg-black/5 dark:hover:bg-white/10 font-medium">Bônus</a>
           <a href="#quiz-section" class="drawer__link block px-3 py-3 rounded-2xl hover:bg-black/5 dark:hover:bg-white/10 font-medium">Show do Cupom</a>
-          <a href="#autor" class="drawer__link block px-3 py-3 rounded-2xl hover:bg-black/5 dark:hover:bg-white/10 font-medium">Sobre o Autor</a>
+          <a href="#autor" class="drawer__link block px-3 py-3 rounded-2xl hover:bg-black/5 dark:hover:bg-white/10 font-medium">Sobre o Projeto</a>
           <a href="#prova" class="drawer__link block px-3 py-3 rounded-2xl hover:bg-black/5 dark:hover:bg-white/10 font-medium">Depoimentos</a>
           <a href="#blog" class="drawer__link block px-3 py-3 rounded-2xl hover:bg-black/5 dark:hover:bg-white/10 font-medium">Blog</a>
           <a href="#oferta" class="drawer__link block px-3 py-3 rounded-2xl hover:bg-black/5 dark:hover:bg-white/10 font-medium">Oferta</a>
@@ -253,10 +249,10 @@
             O Enigma de <u class="hero__highlight italic">Tim Maia Racional</u>: Análise Completa
           </h1>
           <p class="mt-5 text-slate-200 text-lg max-w-prose mx-auto">
-            Finalmente um guia que decifra a história e a filosofia da <strong class="dark:text-white">Cultura Racional</strong>. Entenda a fundo a <strong class="dark:text-white">fase mística de Tim Maia</strong> com nosso livro digital.
+            Finalmente um guia que decifra a história e a filosofia da <strong class="dark:text-white">Cultura Racional</strong>. Entenda a fundo a fase mística de Tim Maia e transforme sua curiosidade em conhecimento definitivo.
           </p>
           <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="#oferta" class="inline-flex items-center justify-center rounded-full font-semibold transition duration-200 ease-in-out transform hover:scale-105 active:scale-95 px-6 py-3.5 text-lg bg-white text-slate-900 hover:bg-slate-200">Quero o livro agora</a>
+            <a href="#oferta" class="inline-flex items-center justify-center rounded-full font-semibold transition duration-200 ease-in-out transform hover:scale-105 active:scale-95 px-6 py-3.5 text-lg bg-white text-slate-900 hover:bg-slate-200">Quero me tornar um expert</a>
             <a href="#historia" class="inline-flex items-center justify-center rounded-full font-semibold transition duration-200 ease-in-out transform hover:scale-105 active:scale-95 px-6 py-3.5 text-lg border-2 border-white text-white hover:bg-white hover:text-black">Entender o mistério</a>
           </div>
           <div class="mt-8 grid grid-cols-3 gap-4 text-sm text-slate-300 max-w-md mx-auto">
@@ -301,8 +297,8 @@
       <div class="max-w-7xl mx-auto px-5">
         <div class="text-center max-w-3xl mx-auto reveal">
           <p class="uppercase tracking-[.14em] text-xs text-black/60 dark:text-white/60 font-semibold">a solução definitiva</p>
-          <h2 class="text-3xl sm:text-5xl font-black dark:text-white">Nosso Livro: Análise Completa da Cultura Racional</h2>
-          <p class="mt-3 text-black/70 dark:text-slate-300">+30 páginas de curadoria exclusiva — contexto, análise da filosofia e exercícios práticos em linguagem clara.</p>
+          <h2 class="text-3xl sm:text-5xl font-black dark:text-white">Análise Completa da Cultura Racional</h2>
+          <p class="mt-3 text-black/70 dark:text-slate-300">Aqui está <strong>tudo o que você precisa saber sobre a fase racional de Tim Maia.</strong> Mais que um livro, é o seu passaporte para dominar o assunto, desde a filosofia por trás da Cultura Racional até a genialidade musical que inspirou o nome de um dos maiores grupos de rap do Brasil, os <strong>Racionais MC's.</strong></p>
         </div>
         <div class="mt-12 grid md:grid-cols-3 gap-6">
           <article class="group rounded-3xl border dark:border-slate-700 bg-white dark:bg-slate-700/50 p-6 shadow-sm transition duration-300 hover:shadow-lg hover:scale-105 reveal"><div class="w-12 h-12 rounded-xl bg-black dark:bg-slate-900 text-white grid place-items-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg></div><h3 class="mt-4 font-extrabold text-xl dark:text-white">A História da Cultura Racional</h3><p class="text-black/70 dark:text-slate-300 mt-2">Origem da doutrina e biografia de Manuel J. Coelho.</p></article>
@@ -320,22 +316,22 @@
       <div class="max-w-7xl mx-auto px-5">
         <div class="max-w-3xl mx-auto text-center reveal">
           <p class="uppercase tracking-[.14em] text-xs text-black/60 dark:text-white/60 font-semibold">para quem é este livro?</p>
-          <h2 class="mt-2 text-3xl sm:text-5xl font-black dark:text-white">Nosso Guia da Fase Racional Foi Feito Para Você</h2>
-          <p class="mt-4 text-black/70 dark:text-slate-400">Criamos este material para atender a todos, desde o fã casual de Tim Maia até o pesquisador dedicado da Cultura Racional.</p>
+          <h2 class="mt-2 text-3xl sm:text-5xl font-black dark:text-white">Este Guia Foi Feito Para Você</h2>
+          <p class="mt-4 text-black/70 dark:text-slate-400">Seja você um fã casual ou um pesquisador dedicado, nosso material foi criado para aprofundar seu conhecimento e te transformar na referência sobre o assunto.</p>
         </div>
         <div class="mt-10 max-w-3xl mx-auto reveal">
           <ul class="space-y-4 text-left">
             <li class="flex items-start gap-4">
-              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 grid place-items-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 6l12-3" /></svg></div>
-              <div><h3 class="font-bold text-lg dark:text-white">Fãs de Tim Maia</h3><p class="text-black/70 dark:text-slate-400">Que desejam entender a fundo a fase mística e controversa do Síndico.</p></div>
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 grid place-items-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg></div>
+              <div><h3 class="font-bold text-lg dark:text-white">Para os Futuros Experts</h3><p class="text-black/70 dark:text-slate-400">Para quem deseja se tornar um expert sobre a fase Racional em rodas de bar e encontros de amigos, dominando os fatos, as curiosidades e o legado que inspirou até o nome dos Racionais MC's.</p></div>
             </li>
             <li class="flex items-start gap-4">
-              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 grid place-items-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg></div>
-              <div><h3 class="font-bold text-lg dark:text-white">Curiosos sobre a Cultura Racional</h3><p class="text-black/70 dark:text-slate-400">Que buscam uma análise imparcial do livro Universo em Desencanto.</p></div>
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 grid place-items-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 6l12-3" /></svg></div>
+              <div><h3 class="font-bold text-lg dark:text-white">Fãs de Tim Maia</h3><p class="text-black/70 dark:text-slate-400">Que desejam entender a fundo a fase mística e controversa do Síndico, indo muito além das histórias superficiais.</p></div>
             </li>
             <li class="flex items-start gap-4">
               <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 grid place-items-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg></div>
-              <div><h3 class="font-bold text-lg dark:text-white">Estudantes e Pesquisadores</h3><p class="text-black/70 dark:text-slate-400">De música e cultura brasileira que precisam de uma fonte consolidada.</p></div>
+              <div><h3 class="font-bold text-lg dark:text-white">Estudantes e Pesquisadores</h3><p class="text-black/70 dark:text-slate-400">De música e cultura brasileira que precisam de uma fonte consolidada, imparcial e rica em detalhes.</p></div>
             </li>
           </ul>
         </div>
@@ -363,28 +359,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Seção de Amostra Grátis -->
-    <section id="preview" class="py-16 md:py-20">
-      <div class="max-w-7xl mx-auto px-5">
-        <div class="text-center max-w-3xl mx-auto reveal">
-          <p class="uppercase tracking-[.14em] text-xs text-black/60 dark:text-white/60 font-semibold">prove a qualidade</p>
-          <h2 class="text-3xl sm:text-5xl font-black dark:text-white">Dê uma Espiada Grátis no Guia</h2>
-          <p class="mt-3 text-black/70 dark:text-slate-400 max-w-prose mx-auto">Veja com seus próprios olhos a qualidade do nosso material. Disponibilizamos 3 páginas do ebook para você ter um gostinho do que espera por você.</p>
-        </div>
-        <div class="mt-12 max-w-4xl mx-auto reveal">
-          <div class="preview-container dark:bg-slate-800">
-            <iframe class="w-full h-[500px] sm:h-[600px] rounded-md" src="https://docs.google.com/gview?url=https://github.com/brenerpompeo/timmaiamistico/raw/main/public/amostra-tim-maia-mistico.pdf&embedded=true" frameborder="0"></iframe>
-          </div>
-          <div class="text-center mt-8">
-            <a href="https://github.com/brenerpompeo/timmaiamistico/raw/main/public/amostra-tim-maia-mistico.pdf" target="_blank" class="inline-flex items-center justify-center rounded-full font-semibold transition duration-200 ease-in-out transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-emerald-600 text-white hover:bg-emerald-500">
-              Baixar Amostra em PDF
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
 
     <!-- Seção de Bônus -->
     <section id="bonus" class="py-16 md:py-20 bg-[#F6F7F6] dark:bg-slate-800">
@@ -432,23 +406,22 @@
       </div>
     </section>
     
-     <!-- Seção Sobre o Autor -->
+    <!-- Seção Sobre o Projeto -->
     <section id="autor" class="py-16 md:py-20 bg-slate-50 dark:bg-slate-950">
-        <div class="max-w-7xl mx-auto px-5">
-            <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-8 items-center reveal">
-                <div class="md:col-span-1">
-                    <img src="https://placehold.co/400x400/E2E8F0/475569?text=Autor" alt="Foto do autor do guia, um especialista em cultura brasileira e na obra de Tim Maia." class="rounded-full w-48 h-48 mx-auto object-cover shadow-lg border-4 border-white dark:border-slate-700">
-                </div>
-                <div class="md:col-span-2 text-center md:text-left">
-                     <p class="uppercase tracking-[.14em] text-xs text-black/60 dark:text-white/60 font-semibold">sobre o autor</p>
-                    <h2 class="text-3xl sm:text-4xl font-black dark:text-white mt-2">Quem Desvendou o Mistério?</h2>
-                    <p class="mt-4 text-black/70 dark:text-slate-300">Este guia é fruto de anos de pesquisa por Bréner Pompêo, um jornalista e pesquisador musical apaixonado pela cultura brasileira. Cansado de informações fragmentadas e mitos sobre a fase Racional de Tim Maia, ele mergulhou em livros, artigos e nos próprios discos para criar a análise mais completa e imparcial sobre o tema.</p>
-                    <p class="mt-3 text-black/70 dark:text-slate-300">O objetivo é simples: oferecer a você um atalho, um guia definitivo que economiza seu tempo e entrega apenas o conhecimento essencial, com a credibilidade que o assunto merece.</p>
-                </div>
-            </div>
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-8 items-center reveal">
+          <div class="md:col-span-1">
+            <img src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1323ab76-376e-4900-a250-5bff384244c5_1200x1200.png" alt="Logo Tim Maia Místico" class="rounded-full w-48 h-48 mx-auto object-cover shadow-lg border-4 border-white dark:border-slate-700">
+          </div>
+          <div class="md:col-span-2 text-center md:text-left">
+            <p class="uppercase tracking-[.14em] text-xs text-black/60 dark:text-white/60 font-semibold">SOBRE O PROJETO</p>
+            <h2 class="text-3xl sm:text-4xl font-black dark:text-white mt-2">Feito por fãs, para fãs</h2>
+            <p class="mt-4 text-black/70 dark:text-slate-300">Este guia é fruto de um trabalho colaborativo de <strong>jornalistas culturais</strong> e pesquisadores apaixonados pela cultura brasileira. Cansados de informações fragmentadas e mitos sobre a fase Racional de Tim Maia, mergulhamos em livros, artigos e nos próprios discos para criar a análise mais completa e imparcial sobre o tema.</p>
+            <p class="mt-3 text-black/70 dark:text-slate-300">Nosso objetivo é simples: <strong>disseminar e preservar a fase racional de Tim Maia</strong>, assegurando que sua profundidade filosófica e musical seja compreendida e valorizada pelas novas gerações.</p>
+          </div>
         </div>
+      </div>
     </section>
-
 
     <!-- Seção de Prova Social -->
     <section id="prova" class="py-16 md:py-20">
@@ -468,11 +441,6 @@
           <figure class="reveal rounded-3xl border dark:border-slate-700 p-6"><div class="flex items-start gap-3"><img loading="lazy" src="https://placehold.co/120x120/E2E8F0/475569?text=Ricardo" alt="Foto de Ricardo L." class="w-12 h-12 rounded-full object-cover" /><div><p class="font-extrabold dark:text-white">Ricardo L.</p><span class="text-black/60 dark:text-slate-400 text-sm">Fã de MPB</span></div></div><div class="mt-4"><span class="inline-flex px-3 py-1 rounded-full bg-black dark:bg-slate-600 text-white text-sm">Análise impecável</span></div><blockquote class="mt-3 text-black/75 dark:text-slate-300">“Um guia que finalmente explica tudo sobre a Cultura Racional sem rodeios. Leitura essencial!”</blockquote><div class="mt-4 flex gap-1 text-amber-500" aria-label="5 estrelas">★★★★★</div></figure>
           <figure class="reveal rounded-3xl border dark:border-slate-700 p-6"><div class="flex items-start gap-3"><img loading="lazy" src="https://placehold.co/120x120/E2E8F0/475569?text=Juliana" alt="Foto de Juliana S." class="w-12 h-12 rounded-full object-cover" /><div><p class="font-extrabold dark:text-white">Juliana S.</p><span class="text-black/60 dark:text-slate-400 text-sm">Designer</span></div></div><div class="mt-4"><span class="inline-flex px-3 py-1 rounded-full bg-black dark:bg-slate-600 text-white text-sm">Clareza que buscava</span></div><blockquote class="mt-3 text-black/75 dark:text-slate-300">“Design impecável e direto ao ponto. A clareza que eu buscava sobre a fase Racional.”</blockquote><div class="mt-4 flex gap-1 text-amber-500" aria-label="5 estrelas">★★★★★</div></figure>
           <figure class="reveal rounded-3xl border dark:border-slate-700 p-6"><div class="flex items-start gap-3"><img loading="lazy" src="https://placehold.co/120x120/E2E8F0/475569?text=M.+O." alt="Foto de M. Oliveira" class="w-12 h-12 rounded-full object-cover" /><div><p class="font-extrabold dark:text-white">M. Oliveira</p><span class="text-black/60 dark:text-slate-400 text-sm">Pesquisador</span></div></div><div class="mt-4"><span class="inline-flex px-3 py-1 rounded-full bg-black dark:bg-slate-600 text-white text-sm">Trabalho jornalístico sério</span></div><blockquote class="mt-3 text-black/75 dark:text-slate-300">“A abordagem neutra sobre a filosofia Racional é o grande diferencial. Referência!”</blockquote><div class="mt-4 flex gap-1 text-amber-500" aria-label="5 estrelas">★★★★★</div></figure>
-        </div>
-        <div class="mt-6 grid md:grid-cols-3 gap-6">
-          <figure class="reveal rounded-3xl border dark:border-slate-700 p-6"><div class="flex items-start gap-3"><img loading="lazy" src="https://placehold.co/120x120/E2E8F0/475569?text=Beatriz" alt="Foto de Beatriz C." class="w-12 h-12 rounded-full object-cover" /><div><p class="font-extrabold dark:text-white">Beatriz C.</p><span class="text-black/60 dark:text-slate-400 text-sm">Musicista</span></div></div><div class="mt-4"><span class="inline-flex px-3 py-1 rounded-full bg-black dark:bg-slate-600 text-white text-sm">Direto ao ponto</span></div><blockquote class="mt-3 text-black/75 dark:text-slate-300">“Economizou horas de pesquisa. Tudo que eu precisava saber sobre Tim Maia Racional, compilado e bem escrito.”</blockquote><div class="mt-4 flex gap-1 text-amber-500" aria-label="5 estrelas">★★★★★</div></figure>
-          <figure class="reveal rounded-3xl border dark:border-slate-700 p-6"><div class="flex items-start gap-3"><img loading="lazy" src="https://placehold.co/120x120/E2E8F0/475569?text=Lucas" alt="Foto de Lucas M." class="w-12 h-12 rounded-full object-cover" /><div><p class="font-extrabold dark:text-white">Lucas M.</p><span class="text-black/60 dark:text-slate-400 text-sm">Estudante</span></div></div><div class="mt-4"><span class="inline-flex px-3 py-1 rounded-full bg-black dark:bg-slate-600 text-white text-sm">Para leigos e experts</span></div><blockquote class="mt-3 text-black/75 dark:text-slate-300">“Conseguiram explicar um tema complexo como a Cultura Racional de forma super acessível.”</blockquote><div class="mt-4 flex gap-1 text-amber-500" aria-label="5 estrelas">★★★★★</div></figure>
-          <figure class="reveal rounded-3xl border dark:border-slate-700 p-6"><div class="flex items-start gap-3"><img loading="lazy" src="https://placehold.co/120x120/E2E8F0/475569?text=Fernanda" alt="Foto de Fernanda A." class="w-12 h-12 rounded-full object-cover" /><div><p class="font-extrabold dark:text-white">Fernanda A.</p><span class="text-black/60 dark:text-slate-400 text-sm">Jornalista Cultural</span></div></div><div class="mt-4"><span class="inline-flex px-3 py-1 rounded-full bg-black dark:bg-slate-600 text-white text-sm">Fonte confiável</span></div><blockquote class="mt-3 text-black/75 dark:text-slate-300">“Material bem pesquisado e imparcial sobre Tim Maia e o livro Universo em Desencanto. Excelente!”</blockquote><div class="mt-4 flex gap-1 text-amber-500" aria-label="5 estrelas">★★★★★</div></figure>
         </div>
       </div>
     </section>
@@ -534,7 +502,7 @@
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12 reveal">
                 <div class="text-left">
                     <div class="flex items-center gap-4 mb-2">
-                        <img src="https://miro.medium.com/1*RB1rxSK_TBmcC5D2PN30JA.png" alt="Logo do Medium" class="h-16 w-16 rounded-full border-4 border-white dark:border-slate-700 shadow-md">
+                        <img src="https://miro.medium.com/1*RB1rxSK_TBmcC5D2PN30JA.png" alt="Logo do Medium" class="h-16 w-auto rounded-full border-4 border-white dark:border-slate-700 shadow-md">
                         <p class="uppercase tracking-[.14em] text-xs text-black/60 dark:text-white/60 font-semibold">Parceiro Oficial</p>
                     </div>
                     <h2 class="text-3xl sm:text-5xl font-black dark:text-white">Análises Exclusivas no Medium</h2>
