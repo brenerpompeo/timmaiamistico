@@ -139,7 +139,16 @@
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = { darkMode: 'class' }
+    tailwind.config = { 
+        darkMode: 'class',
+        theme: {
+            extend: {
+                fontFamily: {
+                    serif: ['Georgia', 'Times New Roman', 'serif'],
+                }
+            }
+        }
+    }
   </script>
 
   <!-- Estilos Customizados -->
@@ -169,6 +178,10 @@
     /* CORREÇÃO: Garante que o logo do Medium não estique */
     #blog img.h-16 {
       object-fit: contain;
+    }
+    .faded-edge {
+      -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+      mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
     }
   </style>
 
@@ -221,6 +234,7 @@
           <a href="#valor" class="drawer__link block px-3 py-3 rounded-2xl hover:bg-black/5 dark:hover:bg-white/10 font-medium">A Solução</a>
           <a href="#para-quem" class="drawer__link block px-3 py-3 rounded-2xl hover:bg-black/5 dark:hover:bg-white/10 font-medium">Para Quem É?</a>
           <a href="#conteudos" class="drawer__link block px-3 py-3 rounded-2xl hover:bg-black/5 dark:hover:bg-white/10 font-medium">Conteúdo do Livro</a>
+          <a href="#amostra" class="drawer__link block px-3 py-3 rounded-2xl hover:bg-black/5 dark:hover:bg-white/10 font-medium">Amostra do Guia</a>
           <a href="#bonus" class="drawer__link block px-3 py-3 rounded-2xl hover:bg-black/5 dark:hover:bg-white/10 font-medium">Bônus</a>
           <a href="#quiz-section" class="drawer__link block px-3 py-3 rounded-2xl hover:bg-black/5 dark:hover:bg-white/10 font-medium">Show do Cupom</a>
           <a href="#autor" class="drawer__link block px-3 py-3 rounded-2xl hover:bg-black/5 dark:hover:bg-white/10 font-medium">Sobre o Projeto</a>
@@ -235,34 +249,47 @@
   </header>
 
   <main>
-    <!-- Seção Hero -->
-    <section id="inicio" class="relative bg-slate-900 py-20 sm:py-28 overflow-hidden">
+    <!-- 
+    ============================================================
+    SEÇÃO HERO ATUALIZADA (v2)
+    ============================================================
+    -->
+    <section id="inicio" class="relative bg-slate-900 overflow-hidden">
       <div class="absolute inset-0 z-0">
-        <img src="https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?q=80&w=2071&auto=format&fit=crop" alt="Fundo cósmico com estrelas e nebulosas, representando o Universo em Desencanto" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-black/60 dark:bg-black/75"></div>
+        <img src="https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?q=80&w=2071&auto=format&fit=crop" alt="Fundo cósmico com estrelas e nebulosas, representando o Universo em Desencanto" class="w-full h-full object-cover opacity-30">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent"></div>
       </div>
       
-      <div class="relative z-10 max-w-4xl mx-auto px-5 text-center">
-        <div>
-          <p class="uppercase tracking-[.14em] text-xs text-white/70 font-semibold">livro digital exclusivo</p>
-          <h1 class="mt-2 text-4xl sm:text-6xl font-black leading-tight text-white">
-            O Enigma de <u class="hero__highlight italic">Tim Maia Racional</u>: Análise Completa
+      <div class="relative z-10 max-w-7xl mx-auto px-5 grid lg:grid-cols-2 gap-10 items-center py-20 sm:py-28">
+        <!-- Coluna da Esquerda: Textos -->
+        <div class="text-center sm:text-left">
+          
+          <p class="uppercase tracking-widest text-emerald-400 font-semibold text-sm">Análise completa e guia definitivo</p>
+          
+          <h1 class="mt-3 text-4xl sm:text-5xl font-black leading-tight text-white">
+            O Guia Definitivo Para Entender a Fase Racional
           </h1>
-          <p class="mt-5 text-slate-200 text-lg max-w-prose mx-auto">
-            Finalmente um guia que decifra a história e a filosofia da <strong class="dark:text-white">Cultura Racional</strong>. Entenda a fundo a fase mística de Tim Maia e transforme sua curiosidade em conhecimento definitivo.
+          <p class="mt-5 text-slate-300 text-lg max-w-prose">
+            Decifre a história e a filosofia da <strong class="text-white">Cultura Racional</strong>, a fase mais controversa e genial de Tim Maia, e transforme sua curiosidade em conhecimento.
           </p>
-          <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="#oferta" class="inline-flex items-center justify-center rounded-full font-semibold transition duration-200 ease-in-out transform hover:scale-105 active:scale-95 px-6 py-3.5 text-lg bg-white text-slate-900 hover:bg-slate-200">Quero me tornar um expert</a>
-            <a href="#historia" class="inline-flex items-center justify-center rounded-full font-semibold transition duration-200 ease-in-out transform hover:scale-105 active:scale-95 px-6 py-3.5 text-lg border-2 border-white text-white hover:bg-white hover:text-black">Entender o mistério</a>
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a href="#oferta" class="inline-flex items-center justify-center rounded-full font-semibold transition duration-200 ease-in-out transform hover:scale-105 active:scale-95 px-6 py-3.5 text-lg bg-white text-slate-900 hover:bg-slate-200">Quero Desvendar o Mistério</a>
           </div>
-          <div class="mt-8 grid grid-cols-3 gap-4 text-sm text-slate-300 max-w-md mx-auto">
-            <div class="flex items-center justify-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-400" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>Compra segura</div>
+          <div class="mt-8 grid grid-cols-3 gap-4 text-sm text-slate-300 max-w-md">
+            <div class="flex items-center justify-center sm:justify-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-400" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>Compra segura</div>
             <div class="flex items-center justify-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.414-1.414L11 9.586V6z" clip-rule="evenodd" /></svg>Acesso imediato</div>
             <div class="flex items-center justify-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-400" viewBox="0 0 20 20" fill="currentColor"><path d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" /></svg>PDF premium</div>
           </div>
         </div>
+
+        <!-- Coluna da Direita: Imagem -->
+        <div class="flex items-center justify-center mt-10 lg:mt-0">
+            <img src="tim-maia-ebook-capa.jpg" alt="Capa do eBook 'A Jornada Cósmica do Síndico' sobre Tim Maia Racional" class="w-full max-w-sm sm:max-w-md transform transition duration-500 hover:scale-105 shadow-2xl rounded-lg">
+        </div>
       </div>
     </section>
+    <!-- ============================================================ -->
+
 
     <!-- Seção "Problema" -->
     <section id="historia" class="py-16 md:py-20">
@@ -359,6 +386,49 @@
         </div>
       </div>
     </section>
+
+    <!-- 
+    ============================================================
+    NOVA SEÇÃO DE AMOSTRA DO EBOOK
+    ============================================================
+    -->
+    <section id="amostra" class="py-16 md:py-20">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="text-center max-w-3xl mx-auto reveal">
+          <p class="uppercase tracking-[.14em] text-xs text-black/60 dark:text-white/60 font-semibold">Sinta a qualidade</p>
+          <h2 class="text-3xl sm:text-5xl font-black dark:text-white">Mergulhe em uma Amostra do Guia</h2>
+          <p class="mt-2 text-black/70 dark:text-slate-400">Veja por que nosso guia é a análise definitiva sobre a fase mais enigmática de Tim Maia. Uma pequena amostra da clareza e profundidade que você encontrará.</p>
+        </div>
+
+        <div class="mt-12 grid lg:grid-cols-5 gap-8 lg:gap-12 items-center reveal">
+          <!-- Coluna da Imagem do Livro -->
+          <div class="lg:col-span-2 flex justify-center">
+            <img src="tim-maia-ebook-capa.jpg" alt="Capa do eBook A Jornada Cósmica do Síndico" class="rounded-lg shadow-2xl w-full max-w-sm object-cover transform transition duration-500 hover:scale-105 hover:rotate-[-2deg]">
+          </div>
+
+          <!-- Coluna do Conteúdo da Amostra -->
+          <div class="lg:col-span-3">
+            <div class="bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-6 sm:p-8 border dark:border-slate-700/50">
+                <p class="text-sm text-emerald-600 dark:text-emerald-400 font-bold tracking-wider uppercase">Trecho do Capítulo 2</p>
+                <h3 class="mt-2 text-2xl font-black dark:text-white">A Conversão do Síndico</h3>
+                <div class="mt-4 space-y-4 text-black/80 dark:text-slate-300 h-64 overflow-hidden relative faded-edge">
+                    <p class="font-serif leading-relaxed">
+                        O ano era 1974. Tim Maia, já consolidado como um dos maiores nomes da música brasileira, vivia o auge do sucesso e dos excessos. Foi nesse cenário de caos criativo que ele travou contato com a Cultura Racional através de seu guitarrista, Paulinho Guitarra. A promessa não era pequena: um conhecimento vindo do "Mundo Racional" que traria a "Imunização Racional", um estado de equilíbrio e sabedoria cósmica capaz de livrar o ser humano dos sofrimentos do "mundo de matéria".
+                    </p>
+                    <p class="font-serif leading-relaxed">
+                        Cético a princípio, mas profundamente curioso, Tim mergulhou na leitura do livro "Universo em Desencanto", ditado pela entidade "Racional Superior" a Manuel Jacinto Coelho. A obra apresentava uma cosmogonia complexa, explicando a origem da vida e do universo como uma consequência da degeneração de seres perfeitos que habitavam o Mundo Racional. Para retornar a esse estado original, era preciso ler o livro e se conectar à Energia Racional...
+                    </p>
+                </div>
+                <a href="#oferta" class="mt-6 inline-flex items-center justify-center w-full rounded-full font-semibold transition duration-200 ease-in-out transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-black dark:bg-slate-200 text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-white">
+                    Continue lendo... Adquira o guia completo
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ============================================================ -->
+
 
     <!-- Seção de Bônus -->
     <section id="bonus" class="py-16 md:py-20 bg-[#F6F7F6] dark:bg-slate-800">
